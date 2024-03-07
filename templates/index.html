@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <font size="+3">
+    <font size="+2">
         <table>
             <thead>
                 <tr>
@@ -35,8 +35,9 @@
             <tbody>
                 {% for d in data %}
                 <tr>
-                    <td>{{ d.hostname }}</td>
+                    <td>{{ d.name }}</td>
                     <td><a href="http://{{ d.ip }}" target="_blank">{{ d.ip }}</a></td>
+                    <td>{{ d.hostname }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
