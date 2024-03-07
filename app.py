@@ -71,4 +71,4 @@ async def index():
         print("File not found")
     return await render_template("index.html", data=data)  # Required to be in templates/
 
-app.run(host='0.0.0.0', port=5500, debug=True)
+app.run(host='0.0.0.0', port=5550, debug=True)
