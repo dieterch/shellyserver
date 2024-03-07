@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS masquerade leases</title>
+    <style>
+        table, 
+        td,
+        th {
+            border: 0px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+            text-align: left;
+        }
+
+        tfoot {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <font size="+3">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Shelly DNS Leases</th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>IP</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for d in data %}
+                <tr>
+                    <td>{{ d.hostname }}</td>
+                    <td><a href="http://{{ d.ip }}" target="_blank">{{ d.ip }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <!--tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th>$300</th>
+                </tr>
+            </tfoot-->
+        </table>
+        <a href="/wakeonlan">WakeOnLan Server</a>
+    </font>
+</body>
+
