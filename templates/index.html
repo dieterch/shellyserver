@@ -30,6 +30,8 @@
                 <tr>
                     <th>Name</th>
                     <th>IP</th>
+                    <th>Pwr</th>
+                    <th>Hostname</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,9 +39,14 @@
                 <tr>
                     <td>{{ d.name }}</td>
                     <td><a href="http://{{ d.ip }}" target="_blank">{{ d.ip }}</a></td>
+                    <td>{{ d.power }}</td>
                     <td>{{ d.hostname }}</td>
                 </tr>
                 {% endfor %}
+                <td>Power Summary</td>
+                <td></td>
+                <td>{{ powersum }}</td>
+                <td></td>
             </tbody>
             <!--tfoot>
                 <tr>
